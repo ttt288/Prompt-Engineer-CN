@@ -188,6 +188,35 @@ tests/
 - 安全性：是否抵御中文提示注入和隐私泄露。
 - 模型稳定性：多次运行是否漂移。
 
+## Benchmark
+
+真实效果需要用 benchmark 数据证明。项目提供 `benchmarks/` 作为对比实验框架，用同一批中文任务比较：
+
+- `bare`：用户原始 Prompt。
+- `generic`：通用工程化 Prompt。
+- `cn`：Prompt Engineer CN 优化版。
+
+建议在 DeepSeek、Qwen、Kimi、GLM 等模型上各跑 3-5 次，统计格式通过率、任务完成度、中文自然度、平台适配度、安全性、稳定性和 token 成本。
+
+详见 [benchmarks/README.md](benchmarks/README.md)。
+
+## 高级能力模块
+
+高级提示工程能力保留在 `advanced/`：
+
+- System Prompt Design
+- Few-shot Prompting
+- Tool Use
+- Structured Output
+- Context Management
+- Evaluation
+- Multi-turn Conversation
+- Multimodal Prompting
+- Agent Patterns
+- Safety
+
+详见 [advanced/README.md](advanced/README.md)。
+
 ## 快速使用
 
 ```bash

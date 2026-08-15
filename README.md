@@ -23,6 +23,8 @@
 - 内置Prompt优化器：把一坨模糊需求拆成缺失信息、优化Prompt和可执行任务。
 - 中文Prompt Injection防护：覆盖中文直攻、角色扮演、RAG 间接注入。
 - 本地化测试集：比较不同模型在中文任务的稳定性。
+- Benchmark框架：支持对比裸Prompt、通用工程版和CN版在不同模型上的表现。
+- 高级能力模块：保留 System Prompt、Few-shot、Tool Use、Structured Output、RAG、多轮、多模态、Agent、安全等工程能力。
 
 项目是 **Prompt Skill / Prompt Engineering 能力包**。它提供的一套可以放进不同AI里的提示词结构、场景模板、安全规则和测试集。
 
@@ -38,6 +40,35 @@
 ```
 
 AI应先分析任务、缺失信息和输出结构，不是随便写一篇。
+
+## 需要真实数据
+
+项目已经提供benchmark框架，但真实提升幅度需要实际跑模型后填写。
+
+建议对同一批任务分别测试：
+
+- 裸Prompt
+- 通用工程版Prompt
+- Prompt Engineer CN版
+
+模型建议：
+
+- DeepSeek
+- Qwen / 通义千问
+- Kimi
+- GLM / 智谱
+
+指标建议：
+
+- 格式通过率
+- 任务完成度
+- 中文自然度
+- 平台适配度
+- 安全性
+- 稳定性
+- token成本
+
+相关文件见：`benchmarks/README.md`。
 
 ## 实践例子
 
@@ -90,7 +121,7 @@ After:
 ```
 
 
-### 例3：中文 Prompt Injection 专门防
+### 例3：中文 Prompt Injection 防
 
 ```text
 Before:
@@ -147,6 +178,8 @@ After:
 
 ```text
 SKILL.md
+advanced/
+benchmarks/
 prompts/
 models/
 scenarios/
@@ -171,9 +204,11 @@ python scripts/evaluate.py
 2. `prompts/optimizer.md`
 3. `examples/before-after.md`
 4. `models/comparison.md`
-5. `models/deepseek.md` 和 `models/qwen.md`
-6. `scenarios/xiaohongshu.md`、`scenarios/resume.md`
-7. `tests/prompt_injection/chinese_direct.yaml`
+5. `advanced/README.md`
+6. `benchmarks/README.md`
+7. `models/deepseek.md` 和 `models/qwen.md`
+8. `scenarios/xiaohongshu.md`、`scenarios/resume.md`
+9. `tests/prompt_injection/chinese_direct.yaml`
 
 ## License
 
