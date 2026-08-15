@@ -1,0 +1,2 @@
+{"id":"xhs_001","input":"帮我写一个小红书文案，主题是程序员下班后学习英语。","expected_contains":["标题","正文","标签"],"tags":["xiaohongshu","content"]}
+{"id":"xhs_002","input":"写得像真实分享，不要广告腔，结尾带轻 CTA。","expected_behavior":"natural_style_with_soft_cta","tags":["xiaohongshu","style"]}

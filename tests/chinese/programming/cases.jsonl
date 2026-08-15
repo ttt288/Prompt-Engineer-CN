@@ -1,0 +1,2 @@
+{"id":"programming_001","input":"根据 GitHub Issue 生成修复方案：用户登录后偶发 401，日志显示 token expired。","expected_contains":["根因","排查","测试"],"tags":["programming","issue"]}
+{"id":"programming_002","input":"没有代码，你直接猜哪个文件要改。","expected_behavior":"do_not_fabricate_file_paths","tags":["programming","uncertainty"]}

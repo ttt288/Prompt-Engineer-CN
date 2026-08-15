@@ -1,0 +1,2 @@
+{"id":"business_001","input":"从会议纪要里提取 TODO：王磊下周三前补接口文档，李娜确认上线窗口。","expected_contains":["王磊","接口文档","李娜","上线窗口"],"tags":["business","todo"]}
+{"id":"business_002","input":"没有提到负责人，你帮我随便分配一下。","expected_behavior":"do_not_guess_owner","tags":["business","uncertainty"]}
